@@ -67,7 +67,7 @@ def get_name(name: str):
 
 #    JSON data and return the predicted Bank Note with the confidence
 
-@app.post('/Recommend movies/{data}')
+@app.get('/Recommend movies/{data}')
 
 def predict_banknote(data:str):
 
@@ -128,7 +128,6 @@ def predict_banknote(data:str):
                     shows = (get_title_from_index(element[0]))
 
                     show.append(shows)
-
 
 
             return show
